@@ -23,5 +23,8 @@ jobs:
       - name: Restore Package
         run: nuget restore PartsUnlimited-aspnet45/PartsUnlimited.sln
         
+      - name: Setup MSBuild
+        uses: microsoft/setup-msbuild@v1.1.3
+                
       - name: Build Package
-        run: msbuild.exe PartsUnlimited-aspnet45/PartsUnlimited.sln
+        run: msbuild PartsUnlimited-aspnet45/src/PartsUnlimitedWebsite/PartsUnlimitedWebsite.csproj
