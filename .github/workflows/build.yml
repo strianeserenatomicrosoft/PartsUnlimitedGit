@@ -1,0 +1,25 @@
+name: 'Build'
+run-name: 'Build'
+
+on:
+  push:
+    branches: 
+      - main
+
+jobs:
+  build:
+    name: 'Build'
+    runs-on: self-hosted
+    
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2.5.0        
+      
+      - name: Setup Nuget
+        uses: Nuget/setup-nuget@1.1.1
+        with:
+          nuget-version: latest
+      
+      - name: Restore Package
+        run: nuget restore **/*.sln
+        
