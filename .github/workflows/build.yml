@@ -21,8 +21,8 @@ jobs:
           nuget-version: latest
       
       - name: Debugging
-        run: echo ${GITHUB_WORKSPACE}
-      
+        run: echo $GITHUB_WORKSPACE
+        
       - name: Restore Package
         run: nuget restore **/*.sln
         
