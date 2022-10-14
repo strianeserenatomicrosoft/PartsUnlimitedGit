@@ -23,3 +23,5 @@ jobs:
       - name: Restore Package
         run: nuget restore PartsUnlimited-aspnet45/PartsUnlimited.sln
         
+      - name: Build Package
+        run: msbuild.exe PartsUnlimited-aspnet45/PartsUnlimited.sln
