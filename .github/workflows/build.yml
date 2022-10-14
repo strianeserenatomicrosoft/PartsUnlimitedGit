@@ -19,11 +19,7 @@ jobs:
         uses: Nuget/setup-nuget@v1.1.1
         with:
           nuget-version: latest
-      
-      - name: Debugging
-        run: echo $GITHUB_WORKSPACE
-             echo $RUNNER_TEMP
-        
+             
       - name: Restore Package
-        run: nuget restore **/*.sln
+        run: nuget restore $GITHUB_WORKSPACE/*.sln
         
