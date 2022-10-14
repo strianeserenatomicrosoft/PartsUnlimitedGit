@@ -22,6 +22,7 @@ jobs:
       
       - name: Debugging
         run: echo $GITHUB_WORKSPACE
+             echo $RUNNER_TEMP
         
       - name: Restore Package
         run: nuget restore **/*.sln
