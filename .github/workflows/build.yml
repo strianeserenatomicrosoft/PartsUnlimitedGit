@@ -1,6 +1,7 @@
 name: 'Build'
 run-name: 'Build'
 
+
 on:
   push:
     branches: 
@@ -9,6 +10,7 @@ on:
 jobs:
   build:
     name: 'Build'
+    
     runs-on: self-hosted
     
     steps:
